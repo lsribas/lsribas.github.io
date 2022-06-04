@@ -1,7 +1,7 @@
-### Opa, tudo bem? 👋
-Sou Lucas, um jovem estudante de 16 anos apaixonado por programação desde os 12 anos, quando comecei a ter contato com programação, fazendo um simples bot para Discord com Node.js e fui me apaixonando cada vez mais por esse mundo.
+### Hey, how are you? 👋
+I'm Lucas, a 16 years old student felt in love by development since was 12, when i have my first contact with this world building a simple Discord bot with Node.js.
 
-- 📚 Cursando 2° ano do Ensino Médio
-- 🌱 Atualmente estudando React.JS. 
-- 💻 Desenvolvedor Full-Stack
-- 🤍 Node.js
+- 📚 Studying 2° year of high school.
+- 🌱 Actually learning ReactJS.
+- 💻 Full-Stack Developer.
+- 🤍 NodeJS.
