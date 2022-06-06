@@ -190,12 +190,12 @@ main > .secondary-color {
     text-indent: 1em;
 }
 
-#habilities h2 {
+#skills h2 {
     margin-bottom: 1.0rem;
     color: var(--secondary-color);
 }
 
-#habilitieList {
+#skillList {
     display: flex;
     gap: 5.0rem;
     flex-direction: column;
