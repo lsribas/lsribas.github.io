@@ -40,6 +40,38 @@ async function writeNew(actual) {
     writeNew(newActual);
 }
 
+function dotFunction() {
+    if(0 > document.getElementById('contact').getBoundingClientRect().top) {
+        document.getElementById('contactDot').classList.add('active');
+        document.getElementById('certificatesDot').classList.remove('active');
+        return;
+    } else if(0 > document.getElementById('certificates').getBoundingClientRect().top) {
+        document.getElementById('contactDot').classList.remove('active');
+        document.getElementById('certificatesDot').classList.add('active');
+        document.getElementById('projectsDot').classList.remove('active');
+        return;
+    } else if(0 > document.getElementById('projects').getBoundingClientRect().top) {
+        document.getElementById('certificatesDot').classList.remove('active');
+        document.getElementById('projectsDot').classList.add('active');
+        document.getElementById('habilitiesDot').classList.remove('active');
+        return;
+    } else if(0 > document.getElementById('habilities').getBoundingClientRect().top) {
+        document.getElementById('projectsDot').classList.remove('active');
+        document.getElementById('habilitiesDot').classList.add('active');
+        document.getElementById('aboutDot').classList.remove('active');
+        return;
+    } else if(0 > document.getElementById('about').getBoundingClientRect().top) {
+        document.getElementById('habilitiesDot').classList.remove('active');
+        document.getElementById('aboutDot').classList.add('active');
+        document.getElementById('meetingDot').classList.remove('active');
+        return;
+    } else if(0 > document.getElementById('meeting').getBoundingClientRect().top) {
+        document.getElementById('aboutDot').classList.remove('active');
+        document.getElementById('meetingDot').classList.add('active');
+        return;
+    }
+}
+
 window.onload = async function() {
 
     document.getElementById('mobileMenu').onclick = () => {
@@ -63,38 +95,10 @@ window.onload = async function() {
     })
 
     document.addEventListener('scroll', function(e) {
-        if(0 > document.getElementById('contact').getBoundingClientRect().top) {
-            document.getElementById('contactDot').classList.add('active');
-            document.getElementById('certificatesDot').classList.remove('active');
-            return;
-        } else if(0 > document.getElementById('certificates').getBoundingClientRect().top) {
-            document.getElementById('contactDot').classList.remove('active');
-            document.getElementById('certificatesDot').classList.add('active');
-            document.getElementById('projectsDot').classList.remove('active');
-            return;
-        } else if(0 > document.getElementById('projects').getBoundingClientRect().top) {
-            document.getElementById('certificatesDot').classList.remove('active');
-            document.getElementById('projectsDot').classList.add('active');
-            document.getElementById('habilitiesDot').classList.remove('active');
-            return;
-        } else if(0 > document.getElementById('habilities').getBoundingClientRect().top) {
-            document.getElementById('projectsDot').classList.remove('active');
-            document.getElementById('habilitiesDot').classList.add('active');
-            document.getElementById('aboutDot').classList.remove('active');
-            return;
-        } else if(0 > document.getElementById('about').getBoundingClientRect().top) {
-            document.getElementById('habilitiesDot').classList.remove('active');
-            document.getElementById('aboutDot').classList.add('active');
-            document.getElementById('meetingDot').classList.remove('active');
-            return;
-        } else if(0 > document.getElementById('meeting').getBoundingClientRect().top) {
-            document.getElementById('aboutDot').classList.remove('active');
-            document.getElementById('meetingDot').classList.add('active');
-            return;
-        }
+        dotFunction();
     })
     
     await sleep(1000);
-    window.scroll(0,0)
+    dotFunction();
     writeNew(0);
 }
