@@ -359,6 +359,7 @@ a:active, a:hover {
 #nohelloclub {
     display: inline-block;
     color: var(--primary-color);
+    font-size: 2.0rem;
 }
 
 #nohelloclub:hover {
