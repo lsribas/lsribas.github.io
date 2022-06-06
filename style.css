@@ -23,6 +23,10 @@ body {
     background-color: var(--primary-color);
 }
 
+body * {
+    animation: fadeIn 1s ease;
+}
+
 a {
     text-decoration: none;
 }
@@ -566,5 +570,17 @@ footer span#heart {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }

@@ -94,8 +94,7 @@ window.onload = async function() {
         }
     })
     
-    window.scroll(0,0)
-
     await sleep(1000);
+    window.scroll(0,0)
     writeNew(0);
 }
