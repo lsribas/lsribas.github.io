@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Lucas Ribas 💫</title>
 
         <script src="index.js" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
+        <header class="primary-color">
             <div id="logo">
-                <a href="#">&lt;L/&gt;</a>
+                <a href="#">&lt;<span>L</span>/&gt;</a>
             </div>
 
-            <nav>
+            <nav id="navbar">
                 <a href="#about">About</a>
                 <a href="#habilities">Habilities</a>
                 <a href="#projects">Projects</a>
@@ -22,210 +27,271 @@
                 <a href="#contact">Contact</a>
             </nav>
 
-            <div id="others">
-                <a href="github">
-                    <img src="" alt="">
-                </a>
-
-                <a href="linkedin">
-                    <img src="" alt="">
-                </a>
-            </div>
+            <button id="mobileMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+            </button>
         </header>
 
         <main>
-            <div id="meeting">
+            <div class="mainItem primary-color" id="meeting">
                 <div id="meetingMid">
-                    <h1>Hey there! <span>👋🏻</span></h1>
-                    <p>I am <span>Lucas</span>, a <span class="writing">Full-stack developer</span>.</p>
+                    <h1>Hey there! <span id="waving-hand">👋</span></h1>
+                    <p>I am <span>Lucas</span>, a <span id="writing"></span><span id="writingBar">|</span>.</p>
                 </div>
 
                 <div id="meetingBottom">
-                    <p>Scroll down for more...</p>
+                    <p>Scroll down for more about me...</p>
                     <a href="#about">
-                        <img src="" alt="">
+                        >
                     </a>
                 </div>
             </div>
 
-            <div id="about">
-                <div id="aboutImage">
-                    <img src="" alt="">
+            <div class="mainItem secondary-color" id="about">
+                <div class="borderImage">
+                    <img src="images/me.jpg" alt="My photo">
                 </div>
                 <div id="aboutDescription">
                     <h1>About me</h1>
                     <p>
-                        I am a young boy with 16 years old who loves development and learn new things, 
+                        I am a young guy with 16 years old who loves development and loves learn new things, 
                         i am very dedicated and i learn fast.
-                        <br>
+                    <br>
                         I started liking development when i was 12 when i had the interest and built 
-                        a Discord bot using NodeJS (same year where i was OBMEP bronze medalist). With 
-                        the time i lost a little the focus on development, but i never stopped practicing. 
+                        a Discord bot using NodeJS (same year where i was OBMEP bronze medalist). 
+                        With the time i lost a little the focus on development, but i never stopped practicing.
+                    <br>
                         In 2020 with the emergence of the pandemic we were all affected by the lockdown, 
-                        and with much more time at home, i started for deepen learn more of development. 
+                        and with much more time at home, i started for deepen learn more of development.
+                    <br>
                         Keeping in NodeJS i practiced developing some Rest APIs using Express, SQL and 
                         MongoDB for hobby, also i built some Rest APIs using PHP and SQL, and did some 
-                        Discord automations with Python too. During this period i meet a friend that in 
+                        Discord automations with Python too.
+                    <br>
+                        During this period i meet a friend that in 
                         2021 noticing the front-end evolution, he started to learn more about it and 
                         encouraged me, where it was the kick off for me begin learning the famous web 
-                        development triad: HTML, CSS and JavaScript. At the same time i learned the triad, 
-                        i also learned Git. I always keep learning and trying new things, at this moment i am learning 
+                        development triad: HTML, CSS and JavaScript. 
+                        At the same time i learned the triad, i also learned Git.
+                    <br>
+                        I always keep learning and trying new things, at this moment i am learning 
                         ReactJS and TypeScript.
                     </p>
                     <div id="aboutButtons">
-                        <a href="linkedin">
-
-                        </a>
-                        <a href="github">
-
-                        </a>
+                        <strong>
+                            <a target="_blank" href="https://linkedin.com/in/lsribas">LinkedIn</a>
+                        </strong>
+                        |
+                        <strong>
+                            <a target="_blank" href="https://github.com/lsribas">GitHub</a>
+                        </strong>
                     </div>
                 </div>
             </div>
 
-            <div id="habilities">
-                <h1>Habilities</h1>
-                <h2>There are the technologies that i have skills!</h2>
+            <div class="mainItem primary-color" id="habilities">
+                <div class="mainItemDescription">
+                    <h1>Habilities</h1>
+                </div>
 
-                <div id="habilitiesList">
-                    <div class="habilitie">
-                        <img src="" alt="">
-                        <p>HTML</p>
+                <div id="habilitieList">
+                    <div id="technologies">
+                        <h2>There are the technologies that i have skills!</h2>
+                        <div class="technologieList">
+                            <p class="technologie">HTML</p>
+                            <p class="technologie">CSS</p>
+                            <p class="technologie">JavaScript</p>
+                            <p class="technologie">NodeJS</p>
+                            <p class="technologie">TypeScript</p>
+                            <p class="technologie">ReactJS</p>
+                            <p class="technologie">Python</p>
+                            <p class="technologie">PHP</p>
+                            <p class="technologie">Git</p>
+                            <p class="technologie">MongoDB</p>
+                            <p class="technologie">MySQL</p>
+                            <p class="technologie">Socket.io</p>
+                        </div>
                     </div>
-
-                    <div class="habilitie">
-                        <img src="" alt="">
-                        <p>CSS</p>
-                    </div>
-
-                    <div class="habilitie">
-                        <img src="" alt="">
-                        <p>JavaScript</p>
+                    
+                    <div id="languages">
+                        <h2>There are the languages that i have some knowledge!</h2>
+                        <div id="languageList">
+                            <div class="language">
+                                <p><strong>🇧🇷 Portuguese (Brazil)</strong> - Native</p>
+                            </div>
+                            
+                            <div class="language">
+                                <p><strong>🇺🇸 English</strong> - Advanced (C1 Level)</p>
+                            </div>
+                            
+                            <div class="language">
+                                <p><strong>🇪🇸 Spanish</strong> - Basic</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div id="projects">
-                <h1>Projects</h1>
-                <h2>There are some projects that i have made or participate!</h2>
+            <div class="mainItem secondary-color" id="projects">
+                <div class="mainItemDescription">
+                    <h1>Projects</h1>
+                    <h2>There are some projects that i have made or participate!</h2>
+                </div>
 
                 <div id="projectsList">
                     <div class="project">
-                        <img src="" alt="">
+                        <div class="borderImage">
+                            <img src="images/project1-thumbnail.png" alt="A photo representing the project">
+                        </div>
+                        
                         <div class="projectInfo">
-                            <div class="projectTechnologies">
-                                <div class="projectTechnologie">
-                                    <img src="" alt="">
-                                    <p>NodeJS</p>
-                                </div>
-
-                                <div class="projectTechnologie">
-                                    <img src="" alt="">
-                                    <p>MongoDB</p>
+                            <div class="projectTitle">
+                                <h3>This Portfolio</h3>
+                                <div class="technologieList projectTech">
+                                    <p class="technologie">HTML</p>
+                                    <p class="technologie">CSS</p>
+                                    <p class="technologie">JavaScript</p>
                                 </div>
                             </div>
 
-                            <h3>Project Name</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti consectetur voluptatibus illo recusandae non aspernatur nobis. Consequuntur, tempora et ipsum officia quae inventore fugit quaerat, fugiat facere, sint officiis aspernatur!</p>
+                            <p>This portfolio was built using the web development triad.</p>
 
                             <div class="projectButtons">
-                                <a href="access online">
-                                    <img src="" alt="">
-                                    Access
-                                </a>
-
-                                <a href="github repository">
-                                    <img src="" alt="">
-                                    GitHub
-                                </a>
+                                <strong>
+                                    <a href="#">Access Page</a>
+                                </strong>
+                                |
+                                <strong>
+                                    <a target="_blank" href="https://github.com/lsribas/lsribas">GitHub</a>
+                                </strong>
                             </div>
                         </div>
                     </div>
 
                     <div class="project">
-                        <img src="" alt="">
-                        <div class="projectInfo">
-                            <div class="projectTechnologies">
-                                <div class="projectTechnologie">
-                                    <img src="" alt="">
-                                    <p>NodeJS</p>
-                                </div>
+                        <div class="borderImage">
+                            <img src="images/project2-thumbnail.png" alt="A photo representing the project">
+                        </div>
 
-                                <div class="projectTechnologie">
-                                    <img src="" alt="">
-                                    <p>MongoDB</p>
+                        <div class="projectInfo">
+                            <div class="projectTitle">
+                                <h3>NodeJS Authentication Rest API</h3>
+                                <div class="technologieList projectTech">
+                                    <p class="technologie">NodeJS</p>
+                                    <p class="technologie">MongoDB</p>
                                 </div>
                             </div>
 
-                            <h3>Project Name</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti consectetur voluptatibus illo recusandae non aspernatur nobis. Consequuntur, tempora et ipsum officia quae inventore fugit quaerat, fugiat facere, sint officiis aspernatur!</p>
+                            <p>
+                                An NodeJS authentication mechanism using Express to create the server, MongoDB to store users, JWT to create tokens, and before saving the user password it encrypts with bcrypt (blowfish hash). 
+                                <br>    
+                                It has routes to authenticate, create account, confirm e-mail, re-send e-mail confirmation, change password, change e-mail, forgot password, and see user information.
+                            </p>
 
                             <div class="projectButtons">
-                                <a href="access online">
-                                    <img src="" alt="">
-                                    Access
-                                </a>
-
-                                <a href="github repository">
-                                    <img src="" alt="">
-                                    GitHub
-                                </a>
+                                <strong>
+                                    <a href="javascript:void(0)" class="disabled">Access Page</a>
+                                </strong>
+                                |
+                                <strong>
+                                    <a target="_blank" href="https://github.com/lsribas/nodejs-authentication">GitHub</a>
+                                </strong>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="certificates">
-                <h1>Certificates</h1>
-                <h2>There are my certificates!</h2>
+            <div class="mainItem primary-color" id="certificates">
+                <div class="mainItemDescription">
+                    <h1>Certificates</h1>
+                    <h2>There are my certificates!</h2>
+                </div>
 
                 <div id="certificatesList">
-                    <div class="certificate">
-                        <div class="certificateHeader">
-                            <img src="" alt="">
-                            <h3>Trilha Fundamentar</h3>
-                            <button></button>
+                    <a target="_blank" href="https://app.rocketseat.com.br/discover/certificates" class="certificate">
+                        <div class="borderImage certificateImage">
+                            <img src="images/rocketseat.jpeg" alt="Rocketseat logo">
                         </div>
                         <div class="certificateDescription">
-                            <p></p>
+                            <h3>Discover - Trilha Conectar</h3>
+                            <p><span>Rocketseat</span></p>
+                            <p>Código: b372a428-8957-451a-914d-3339085825b2</p>
                         </div>
-                    </div>
+                    </a>
 
-                    <div class="certificate">
-                        <div class="certificateHeader">
-                            <img src="" alt="">
-                            <h3>Trilha Fundamentar</h3>
-                            <button></button>
+                    <div id="line"></div>
+
+                    <a target="_blank" href="https://app.rocketseat.com.br/discover/certificates" class="certificate">
+                        <div class="borderImage certificateImage">
+                            <img src="images/rocketseat.jpeg" alt="">
                         </div>
                         <div class="certificateDescription">
-                            <p></p>
+                            <h3>Discover - Trilha Fundamentar</h3>
+                            <p><span>Rocketseat</span></p>
+                            <p>Código: b8929001-3a11-4e0e-81b9-7e64fd83f8a4</p>
                         </div>
+                    </a>
+
+                    <div id="line"></div>
+
+                    <a target="_blank" href="https://www.efset.org/cert/sTr35o" class="certificate">
+                        <div class="borderImage certificateImage">
+                            <img src="images/efset.jpeg" alt="">
+                        </div>
+                        <div class="certificateDescription">
+                            <h3>C1 Advanced English</h3>
+                            <p><span>EF Standard English Test (EF SET)</span></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mainItem secondary-color" id="contact">
+                <div class="mainItemDescription">
+                    <h1>Contact</h1>
+                    <h2>
+                        I always love to talk, if you want, please don't hesitate to contact me! 
+                        <br>
+                        But please, <a id="nohelloclub" target="_blank" href="https://nohello.club/">don't just say hello.</a>
+                    </h2>
+                </div>
+
+                <div id="contacts">
+                    <h3>Here are some ways to reach me.</h3>
+                    <div id="contactList">
+                        <a target="_blank" href="mailto:contact@lucasribas.dev" class="contactItem">E-mail</a>
+                        <a target="_blank" href="https://linkedin.com/in/lsribas" class="contactItem">LinkedIn</a>
+                        <a target="_blank" href="https://api.whatsapp.com/send/?phone=5511994271833&text&app_absent=0" class="contactItem">WhatsApp</a>
                     </div>
                 </div>
             </div>
 
-            <div id="contact">
-                <h1>Contact</h1>
-                <h2>
-                    I always love to talk, if you want, please don't hesitate to contact me! 
-                    <br>
-                    But please, <a href="https://nohello.club/">don't just say hello.</a>
-                    <br>
-                    Here are some ways to reach me.
-                </h2>
+            <footer>
+                Made with <span id="heart">❤️</span> by <span>Lucas Ribas</span> · 2022
+            </footer>
 
-                <div id="contactList">
-                    <a href="" class="contactItem">
-                        <img src="" alt="">
-                        E-mail
-                    </a>
-
-                    <a href="" class="contactItem">
-                        <img src="" alt="">
-                        Discord
-                    </a>
-                </div>
+            <div id="dots">
+                <a id="meetingDot" href="#">
+                    <svg version="1.1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.955 31.955" style="enable-background:new 0 0 31.955 31.955;" xml:space="preserve"><g><path d="M27.25,4.655C20.996-1.571,10.88-1.546,4.656,4.706C-1.571,10.96-1.548,21.076,4.705,27.3c6.256,6.226,16.374,6.203,22.597-0.051C33.526,20.995,33.505,10.878,27.25,4.655z"/><path d="M13.288,23.896l-1.768,5.207c2.567,0.829,5.331,0.886,7.926,0.17l-0.665-5.416C17.01,24.487,15.067,24.5,13.288,23.896z M8.12,13.122l-5.645-0.859c-0.741,2.666-0.666,5.514,0.225,8.143l5.491-1.375C7.452,17.138,7.426,15.029,8.12,13.122z M28.763,11.333l-4.965,1.675c0.798,2.106,0.716,4.468-0.247,6.522l5.351,0.672C29.827,17.319,29.78,14.193,28.763,11.333z M11.394,2.883l1.018,5.528c2.027-0.954,4.356-1.05,6.442-0.288l1.583-5.137C17.523,1.94,14.328,1.906,11.394,2.883z"/><circle cx="15.979" cy="15.977" r="6.117"/></g></svg>
+                </a>
+                <a id="aboutDot" href="#about">
+                    <svg version="1.1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.955 31.955" style="enable-background:new 0 0 31.955 31.955;" xml:space="preserve"><g><path d="M27.25,4.655C20.996-1.571,10.88-1.546,4.656,4.706C-1.571,10.96-1.548,21.076,4.705,27.3c6.256,6.226,16.374,6.203,22.597-0.051C33.526,20.995,33.505,10.878,27.25,4.655z"/><path d="M13.288,23.896l-1.768,5.207c2.567,0.829,5.331,0.886,7.926,0.17l-0.665-5.416C17.01,24.487,15.067,24.5,13.288,23.896z M8.12,13.122l-5.645-0.859c-0.741,2.666-0.666,5.514,0.225,8.143l5.491-1.375C7.452,17.138,7.426,15.029,8.12,13.122z M28.763,11.333l-4.965,1.675c0.798,2.106,0.716,4.468-0.247,6.522l5.351,0.672C29.827,17.319,29.78,14.193,28.763,11.333z M11.394,2.883l1.018,5.528c2.027-0.954,4.356-1.05,6.442-0.288l1.583-5.137C17.523,1.94,14.328,1.906,11.394,2.883z"/><circle cx="15.979" cy="15.977" r="6.117"/></g></svg>
+                </a>
+                <a id="habilitiesDot" href="#habilities">
+                    <svg version="1.1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.955 31.955" style="enable-background:new 0 0 31.955 31.955;" xml:space="preserve"><g><path d="M27.25,4.655C20.996-1.571,10.88-1.546,4.656,4.706C-1.571,10.96-1.548,21.076,4.705,27.3c6.256,6.226,16.374,6.203,22.597-0.051C33.526,20.995,33.505,10.878,27.25,4.655z"/><path d="M13.288,23.896l-1.768,5.207c2.567,0.829,5.331,0.886,7.926,0.17l-0.665-5.416C17.01,24.487,15.067,24.5,13.288,23.896z M8.12,13.122l-5.645-0.859c-0.741,2.666-0.666,5.514,0.225,8.143l5.491-1.375C7.452,17.138,7.426,15.029,8.12,13.122z M28.763,11.333l-4.965,1.675c0.798,2.106,0.716,4.468-0.247,6.522l5.351,0.672C29.827,17.319,29.78,14.193,28.763,11.333z M11.394,2.883l1.018,5.528c2.027-0.954,4.356-1.05,6.442-0.288l1.583-5.137C17.523,1.94,14.328,1.906,11.394,2.883z"/><circle cx="15.979" cy="15.977" r="6.117"/></g></svg>
+                </a>
+                <a id="projectsDot" href="#projects">
+                    <svg version="1.1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.955 31.955" style="enable-background:new 0 0 31.955 31.955;" xml:space="preserve"><g><path d="M27.25,4.655C20.996-1.571,10.88-1.546,4.656,4.706C-1.571,10.96-1.548,21.076,4.705,27.3c6.256,6.226,16.374,6.203,22.597-0.051C33.526,20.995,33.505,10.878,27.25,4.655z"/><path d="M13.288,23.896l-1.768,5.207c2.567,0.829,5.331,0.886,7.926,0.17l-0.665-5.416C17.01,24.487,15.067,24.5,13.288,23.896z M8.12,13.122l-5.645-0.859c-0.741,2.666-0.666,5.514,0.225,8.143l5.491-1.375C7.452,17.138,7.426,15.029,8.12,13.122z M28.763,11.333l-4.965,1.675c0.798,2.106,0.716,4.468-0.247,6.522l5.351,0.672C29.827,17.319,29.78,14.193,28.763,11.333z M11.394,2.883l1.018,5.528c2.027-0.954,4.356-1.05,6.442-0.288l1.583-5.137C17.523,1.94,14.328,1.906,11.394,2.883z"/><circle cx="15.979" cy="15.977" r="6.117"/></g></svg>
+                </a>
+                <a id="certificatesDot" href="#certificates">
+                    <svg version="1.1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.955 31.955" style="enable-background:new 0 0 31.955 31.955;" xml:space="preserve"><g><path d="M27.25,4.655C20.996-1.571,10.88-1.546,4.656,4.706C-1.571,10.96-1.548,21.076,4.705,27.3c6.256,6.226,16.374,6.203,22.597-0.051C33.526,20.995,33.505,10.878,27.25,4.655z"/><path d="M13.288,23.896l-1.768,5.207c2.567,0.829,5.331,0.886,7.926,0.17l-0.665-5.416C17.01,24.487,15.067,24.5,13.288,23.896z M8.12,13.122l-5.645-0.859c-0.741,2.666-0.666,5.514,0.225,8.143l5.491-1.375C7.452,17.138,7.426,15.029,8.12,13.122z M28.763,11.333l-4.965,1.675c0.798,2.106,0.716,4.468-0.247,6.522l5.351,0.672C29.827,17.319,29.78,14.193,28.763,11.333z M11.394,2.883l1.018,5.528c2.027-0.954,4.356-1.05,6.442-0.288l1.583-5.137C17.523,1.94,14.328,1.906,11.394,2.883z"/><circle cx="15.979" cy="15.977" r="6.117"/></g></svg>
+                </a>
+                <a id="contactDot" href="#contact">
+                    <svg version="1.1" fill="currentColor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 31.955 31.955" style="enable-background:new 0 0 31.955 31.955;" xml:space="preserve"><g><path d="M27.25,4.655C20.996-1.571,10.88-1.546,4.656,4.706C-1.571,10.96-1.548,21.076,4.705,27.3c6.256,6.226,16.374,6.203,22.597-0.051C33.526,20.995,33.505,10.878,27.25,4.655z"/><path d="M13.288,23.896l-1.768,5.207c2.567,0.829,5.331,0.886,7.926,0.17l-0.665-5.416C17.01,24.487,15.067,24.5,13.288,23.896z M8.12,13.122l-5.645-0.859c-0.741,2.666-0.666,5.514,0.225,8.143l5.491-1.375C7.452,17.138,7.426,15.029,8.12,13.122z M28.763,11.333l-4.965,1.675c0.798,2.106,0.716,4.468-0.247,6.522l5.351,0.672C29.827,17.319,29.78,14.193,28.763,11.333z M11.394,2.883l1.018,5.528c2.027-0.954,4.356-1.05,6.442-0.288l1.583-5.137C17.523,1.94,14.328,1.906,11.394,2.883z"/><circle cx="15.979" cy="15.977" r="6.117"/></g></svg>
+                </a>
             </div>
         </main>
     </body>

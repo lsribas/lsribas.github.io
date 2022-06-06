@@ -1,0 +1,569 @@
+:root {
+    --primary-color: hsl(260, 18%, 19%);
+    --secondary-color: hsl(260, 100%, 77%);
+    --tertiary-color: hsl(260, 18%, 29%);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+header {
+    display: flex;
+    height: 5.0rem;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, .7);
+    position: relative;
+    z-index: 10;
+}
+
+#logo {
+    height: 100%;
+}
+
+#logo a, #logo a span {
+    font-family: 'Fira Code', monospace;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    gap: 2.0rem;
+}
+
+header button {
+    background-color: transparent;
+    height: 100%;
+    width: 3.0rem;
+    display: none;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+strong {
+    font-size: 115%;
+}
+
+.mainItem {
+    min-height: 100vh;
+    padding: 7.0rem 30vw 7.0rem 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.primary-color {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.secondary-color {
+    background-color: var(--tertiary-color);
+    color: #fff;
+}
+
+.primary-color h1, .primary-color h3, .secondary-color h1, .secondary-color h3 {
+    color: var(--secondary-color);
+}
+
+.primary-color a:active, .primary-color a:hover, .secondary-color a:active, .secondary-color a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.primary-color span, .secondary-color span {
+    color: var(--secondary-color);
+}
+
+main > .secondary-color {
+    border-radius: 7.0rem;
+}
+
+#meeting {
+    min-height: calc(100vh - 5.0rem);
+}
+
+#meetingMid {
+    height: 10.0rem;
+}
+
+#meetingBottom a {
+    display: inline-block;
+    font-size: 150%;
+    color: var(--secondary-color)!important;
+}
+
+#meetingBottom a:hover, #navbar a:hover {
+    color: var(--secondary-color);
+    background-color: transparent;
+}
+
+#meetingBottom a:hover {
+    transform: rotate(90deg);
+}
+
+#waving-hand {
+    display: inline-block;
+    animation: waving-hand 2.5s infinite;
+    transform-origin: 70% 70%;
+    font-size: 3.2rem;
+}
+
+#writingBar {
+    color: #808080;
+    animation: writingBar 1s infinite;
+}
+
+#about {
+    align-items: center;
+    gap: 2.0rem;
+}
+
+.borderImage {
+    width: 27.0rem;
+    height: 28.0rem;
+    border-radius: 5.0rem;
+    background-color: var(--secondary-color);
+    border-bottom: 1.0rem solid var(--secondary-color);
+}
+
+.borderImage img {
+    width: 27.0rem;
+    height: 27.0rem;
+    object-fit: cover;
+    border-radius: 5.0rem;
+    border: 1.0rem solid #fff;
+}
+
+#aboutDescription h1 {
+    margin-bottom: 2.0rem;
+}
+
+#aboutButtons {
+    margin-top: 2.0rem;
+    display: flex;
+    align-items: center;
+    gap: 2.0rem;
+}
+
+#aboutButtons strong a {
+    color: var(--secondary-color);
+}
+
+#aboutButtons strong a:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+#aboutDescription p {
+    text-indent: 1em;
+}
+
+#habilities h2 {
+    margin-bottom: 1.0rem;
+    color: var(--secondary-color);
+}
+
+#habilitieList {
+    display: flex;
+    gap: 5.0rem;
+    flex-direction: column;
+}
+
+.technologieList {
+    display: flex;
+    gap: 1.0rem;
+    flex-wrap: wrap;
+}
+
+.technologie {
+    display: flex;
+    padding: 0.5rem 1.0rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 2.0rem;
+    align-items: center;
+    transition: all 0.5s;
+    cursor: default;
+}
+
+p.technologie:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 125%;
+}
+
+#projects {
+    gap: 10.0rem;
+}
+
+#projectsList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 4.0rem;
+    flex-wrap: wrap;
+}
+
+.project + .project {
+    border-top: 1px solid var(--secondary-color);
+    padding-top: 2.5rem;
+}
+
+.project .borderImage {
+    width: 32.0rem;
+    height: 19.0rem;
+}
+
+.project img {
+    width: 32.0rem;
+    height: 18.0rem;
+}
+
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.0rem;
+    flex: 1 1 40.0rem;
+}
+
+.projectInfo .technologieList .technologie {
+    border: 1px solid var(--secondary-color);
+    font-size: 1.2rem;
+    padding: 2px 5px;
+}
+
+.projectTitle {
+    display: flex;
+    gap: 2.0rem;
+}
+
+.projectButtons {
+    display: flex;
+    align-items: center;
+    gap: 2.0rem;
+}
+
+a, a:active, a:focus, a:hover, a:link, a:visited {
+    color: inherit;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+a:active, a:hover {
+    color: var(--secondary-color);
+}
+
+#logo a, #logo a:active, #logo a:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    transition: all .5s;
+}
+
+#logo a span, #logo a span:active, #logo a span:hover {
+    color: #fff;
+    transition: all .5s;
+}
+
+#logo a:active > span, #logo a:hover > span {
+    transform: scale(1.5);
+}
+
+.mainItemDescription h2 a {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+#certificatesList {
+    display: flex;
+    flex-direction: column;
+}
+
+#certificatesList .certificate {
+    display: flex;
+    gap: 1.0rem;
+    align-items: center;
+    background-color: transparent;
+    padding: 2.0rem 0;
+}
+
+#certificatesList .certificate:hover {
+    transform: translateX(5%) scale(1.05);
+}
+
+#line {
+    height: 100%;
+    border: 1px solid var(--secondary-color);
+}
+
+.certificateImage {
+    width: 5.0rem;
+    height: 5.5rem;
+    border-radius: 1.0rem;
+    background-color: var(--secondary-color);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.certificateImage img {
+    width: 5.0rem;
+    height: 5.0rem;
+    border-radius: 1.0rem;
+    border: 5px solid #fff;
+}
+
+.certificateDescription p {
+    color: #808080;
+    font-size: 1.2rem;
+}
+
+.certificateDescription p span {
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+#nohelloclub {
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+#nohelloclub:hover {
+    transform: scale(1.05);
+}
+
+#contactList a {
+    color: #fff;
+    display: inline-block;
+    transition: all .5s;
+}
+
+#contactList a:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+}
+
+.secondary-color .projectButtons > strong > a {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.secondary-color .projectButtons > strong > a:hover {
+    color: #fff;
+}
+
+#contactList a + a {
+    margin-left: 1.0rem;
+}
+
+#dots {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: calc(50vh - 10.0rem);
+    right: 15vw;
+    gap: 1.5rem;
+    color: #fff;
+}
+
+#dots a {
+    height: 1.5rem;
+    width: 1.5rem;
+    transition: transform .5s;
+}
+
+#dots a:hover {
+    transform: scale(1.5);
+    color: #fff;
+}
+
+#dots a.active {
+    transform: scale(1.5);
+    color: var(--secondary-color);
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+}
+
+.borderImage {
+    transition: all .5s;
+}
+
+.borderImage:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4.0rem;
+    gap: 0.8rem;
+}
+
+footer span {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+footer span#heart {
+    animation: heart 1s 0.5s infinite;
+}
+
+@media only screen and (min-width: 701px) {
+    nav {
+        display: flex!important;
+   }
+
+}
+
+@media only screen and (max-width: 700px) {
+    nav {
+        position: absolute;
+        top: 5.0rem;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 0;
+        display: none;
+        z-index: 5;
+        background-color: var(--primary-color);
+        box-shadow: 0 0 5px hsla(0, 0%, 0%, .7);
+   }
+
+    nav a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 5.0rem;
+   }
+
+    header button {
+        display: flex;
+   }
+
+    #meeting {
+        min-height: calc(100vh - 5.0rem);
+   }
+
+    .mainItem {
+        min-height: 100vh;
+        height: auto;
+        padding: 5.0rem 10vw;
+   }
+
+    main > .secondary-color {
+        border-radius: 3.0rem;
+   }
+
+    .project {
+        gap: 2.0rem;
+   }
+
+    .project .borderImage {
+        width: 21.4rem;
+        height: 13.0rem;
+   }
+
+    .project img {
+        width: 21.4rem;
+        height: 12.0rem;
+   }
+
+    #dots {
+        display: none;
+   }
+
+}
+
+@keyframes waving-hand {
+    0%, 100%, 50% {
+        transform: rotate(0);
+   }
+
+    10%, 30% {
+        transform: rotate(-10deg);
+   }
+
+    20% {
+        transform: rotate(12deg);
+   }
+
+    40% {
+        transform: rotate(9deg);
+   }
+
+}
+
+@keyframes writingBar {
+    0% {
+        opacity: 0;
+   }
+
+    49% {
+        opacity: 0;
+   }
+
+    50% {
+        opacity: 1;
+   }
+
+}
+
+@keyframes heart {
+    20% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
