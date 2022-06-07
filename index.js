@@ -41,31 +41,31 @@ async function writeNew(actual) {
 }
 
 function dotFunction() {
-    if(50 > document.getElementById('contact').getBoundingClientRect().top) {
+    if(50 >= document.getElementById('contact').getBoundingClientRect().top) {
         document.getElementById('contactDot').classList.add('active');
         document.getElementById('certificatesDot').classList.remove('active');
         return;
-    } else if(50 > document.getElementById('certificates').getBoundingClientRect().top) {
+    } else if(50 >= document.getElementById('certificates').getBoundingClientRect().top) {
         document.getElementById('contactDot').classList.remove('active');
         document.getElementById('certificatesDot').classList.add('active');
         document.getElementById('projectsDot').classList.remove('active');
         return;
-    } else if(50 > document.getElementById('projects').getBoundingClientRect().top) {
+    } else if(50 >= document.getElementById('projects').getBoundingClientRect().top) {
         document.getElementById('certificatesDot').classList.remove('active');
         document.getElementById('projectsDot').classList.add('active');
         document.getElementById('skillsDot').classList.remove('active');
         return;
-    } else if(50 > document.getElementById('skills').getBoundingClientRect().top) {
+    } else if(50 >= document.getElementById('skills').getBoundingClientRect().top) {
         document.getElementById('projectsDot').classList.remove('active');
         document.getElementById('skillsDot').classList.add('active');
         document.getElementById('aboutDot').classList.remove('active');
         return;
-    } else if(50 > document.getElementById('about').getBoundingClientRect().top) {
+    } else if(50 >= document.getElementById('about').getBoundingClientRect().top) {
         document.getElementById('skillsDot').classList.remove('active');
         document.getElementById('aboutDot').classList.add('active');
         document.getElementById('meetingDot').classList.remove('active');
         return;
-    } else if(50 > document.getElementById('meeting').getBoundingClientRect().top) {
+    } else if(50 >= document.getElementById('meeting').getBoundingClientRect().top) {
         document.getElementById('aboutDot').classList.remove('active');
         document.getElementById('meetingDot').classList.add('active');
         return;
